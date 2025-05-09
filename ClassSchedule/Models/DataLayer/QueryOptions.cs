@@ -24,7 +24,7 @@ namespace ClassSchedule.Models
         // read-only properties 
         public bool HasWhere => Where != null;
         public bool HasOrderBy => OrderBy != null;
-        public bool HasThenOrderBy => OrderBy != null;
+        public bool HasThenOrderBy => ThenOrderBy != null;
     }
 
 }

@@ -25,7 +25,7 @@ namespace ClassSchedule.Models
                 query = query.Where(options.Where);
             if (options.HasOrderBy)
             {
-                if (options.HasOrderBy)
+                if (options.HasThenOrderBy)
                 {
                     query = query.OrderBy(options.OrderBy).ThenBy(options.ThenOrderBy);
                 }

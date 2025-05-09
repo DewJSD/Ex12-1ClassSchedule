@@ -7,15 +7,8 @@ namespace ClassSchedule.Controllers
     public class HomeController : Controller
     {
         private ClassScheduleUnitOfWork data { get; set; }
-        public HomeController(ClassScheduleUnitOfWork ctx) =>
-            data = ctx;
-
-
-        public HomeController(ClassScheduleContext ctx)
-        {
+        public HomeController(ClassScheduleContext ctx) =>
             data = new ClassScheduleUnitOfWork(ctx);
-
-        }
 
         public ViewResult Index(int id)
         {

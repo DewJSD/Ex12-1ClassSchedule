@@ -3,10 +3,9 @@
     public class ClassScheduleUnitOfWork : IClassScheduleUnitOfWork
     {
         private ClassScheduleContext context { get; set; }
-        public ClassScheduleUnitOfWork(ClassScheduleContext context)
-        {
-            this.context = context;
-        }
+        public ClassScheduleUnitOfWork(ClassScheduleContext ctx) =>
+            context = ctx;
+        
 
         private Repository<Class> ClassData;
         public Repository<Class> Classes

@@ -7,13 +7,8 @@ namespace ClassSchedule.Controllers
     public class ClassController : Controller
     {
         private ClassScheduleUnitOfWork data { get; set; }
-        public ClassController(ClassScheduleUnitOfWork ctx) =>
-            data = ctx;
-
-        public ClassController(ClassScheduleContext ctx)
-        {
+        public ClassController(ClassScheduleContext ctx) =>
             data = new ClassScheduleUnitOfWork(ctx);
-        }
 
         public RedirectToActionResult Index() => RedirectToAction("Index", "Home");
 
