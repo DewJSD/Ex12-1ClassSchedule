@@ -30,10 +30,11 @@ namespace ClassSchedule.Controllers
             {
                 Includes = "Teacher, Day"
             };
-            // Order by Day if no filter. Else, filter by day and order by time.
+            // Order by Day and time if no filter. Else, filter by day and order by time.
             if (id == 0)
             {
                 classOptions.OrderBy = c => c.DayId;
+                classOptions.ThenOrderBy = c => c.MilitaryTime;
             }
             else
             {
