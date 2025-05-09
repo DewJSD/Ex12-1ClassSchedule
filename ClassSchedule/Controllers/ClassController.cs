@@ -67,10 +67,7 @@ namespace ClassSchedule.Controllers
                 Includes = "Teacher, Day",
                 Where = c => c.ClassId == id
             };
-            var list = data.Classes.List(classOptions);
-
-            // return first Class or blank Class if null
-            return list.FirstOrDefault();
+            return data.Classes.Get(classOptions);
         }
         private void LoadViewBag(string operation)
         {
